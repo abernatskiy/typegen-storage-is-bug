@@ -1,0 +1,122 @@
+{
+  "outDir": "./src/types",
+  "specVersions": "https://v2.archive.subsquid.io/metadata/hydradx",
+  "pallets": {
+    "Sudo": {
+      "calls": ["sudo", "sudo_unchecked_weight", "set_key", "sudo_as"]
+    },
+    "AssetRegistry": {
+      "events": ["Registered", "Updated", "LocationSet"],
+      "storage": ["Assets", "AssetLocations"]
+    },
+    "Bonds": {
+      "events": [],
+      "storage": true
+    },
+    "Balances": {
+      "events": ["Transfer"],
+      "calls": true,
+      "storage": true,
+      "constants": []
+    },
+    "Tokens": {
+      "events": ["Transfer"],
+      "calls": true,
+      "storage": ["Accounts", "TotalIssuance"]
+    },
+    "Currencies": {
+      "events": ["Transferred"],
+      "calls": false,
+      "storage": false
+    },
+    "Router": {
+      "calls": ["sell", "buy"]
+    },
+    "ParachainSystem": {
+      "calls": ["set_validation_data"],
+      "storage": ["LastRelayChainBlockNumber"]
+    },
+    "XYK": {
+      "events": ["PoolCreated", "PoolDestroyed", "SellExecuted", "BuyExecuted"],
+      "calls": ["create_pool", "sell", "buy"],
+      "storage": ["PoolAssets", "ShareToken"],
+      "constants": true
+    },
+    "Omnipool": {
+      "events": ["TokenAdded", "TokenRemoved", "SellExecuted", "BuyExecuted"],
+      "calls": ["sell", "buy"],
+      "storage": ["Assets", "HubAssetTradability"],
+      "constants": true
+    },
+    "Stableswap": {
+      "events": [
+        "PoolCreated",
+        "SellExecuted",
+        "BuyExecuted",
+        "LiquidityAdded",
+        "LiquidityRemoved"
+      ],
+      "calls": ["sell", "buy"],
+      "storage": true,
+      "constants": true
+    },
+    "LBP": {
+      "events": ["PoolUpdated", "PoolCreated", "SellExecuted", "BuyExecuted"],
+      "calls": ["create_pool", "sell", "buy"],
+      "storage": ["PoolData"],
+      "constants": true
+    },
+    "System": {
+      "storage": ["Account"]
+    },
+    "DCA": {
+      "events": true,
+      "calls": true,
+      "storage": true
+    },
+    "OTC": {
+      "events": true,
+      "calls": true,
+      "storage": true
+    },
+    "Utility": {
+      "calls": true
+    },
+    "Broadcast": {
+      "events": true,
+      "calls": true,
+      "storage": true
+    },
+    "EVM": {
+      "events": true,
+      "calls": true,
+      "storage": true
+    },
+    "EVMAccounts": {
+      "events": ["Bound"],
+      "calls": [],
+      "storage": true
+    },
+    "OmnipoolLiquidityMining": {
+      "events": true,
+      "calls": true,
+      "storage": true
+    },
+    "OmnipoolWarehouseLM": {
+      "events": true,
+      "calls": [],
+      "storage": true
+    },
+    "EmaOracle": {
+      "events": [],
+      "calls": [],
+      "storage": true
+    },
+    "DynamicFees": {
+      "events": [],
+      "calls": [],
+      "storage": true,
+      "constants": true
+    }
+  }
+}
