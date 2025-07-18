@@ -8,15 +8,13 @@ import {
     Extrinsic as _Extrinsic
 } from '@subsquid/substrate-processor'
 
-import {events} from './types'
-
 export const processor = new SubstrateBatchProcessor()
   .setRpcEndpoint('wss://node.kril.hydration.cloud')
   .addCall({})
   .includeAllBlocks()
   .setBlockRange({
-    from: 1475995,
-    to: 1475998
+    from: 3359634,
+    to: 3359640
   })
   .setGateway('https://v2.archive.subsquid.io/network/hydradx');
 
