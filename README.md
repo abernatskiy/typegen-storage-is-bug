@@ -1,4 +1,4 @@
-# MRE of a possible substrate typegen / underlying packages bug 
+# lbp.poolData.v176.is() demo on Hydration
 
 At HydraDX the `specVersion` at block 1475996 is 115, but the `storage.*.v115.is()` returns false.
 
@@ -11,9 +11,14 @@ sqd process
 ```
 The output:
 ```
-At height 1475995 header.specVersion is 109 and storage.omnipool.assets.v115.is() is false
-At height 1475996 header.specVersion is 115 and storage.omnipool.assets.v115.is() is false
-At height 1475997 header.specVersion is 115 and storage.omnipool.assets.v115.is() is true
-At height 1475998 header.specVersion is 115 and storage.omnipool.assets.v115.is() is true
+At height 3359634 header.specVersion is 170 and storage.lbp.poolData.v176.is() is false
+At height 3359635 header.specVersion is 170 and storage.lbp.poolData.v176.is() is false
+At height 3359636 header.specVersion is 170 and storage.lbp.poolData.v176.is() is false
+At height 3359637 header.specVersion is 176 and storage.lbp.poolData.v176.is() is false
+At height 3359638 header.specVersion is 176 and storage.lbp.poolData.v176.is() is true
+Got 0 key-value pairs from storage
+At height 3359639 header.specVersion is 176 and storage.lbp.poolData.v176.is() is true
+Got 0 key-value pairs from storage
+At height 3359640 header.specVersion is 176 and storage.lbp.poolData.v176.is() is true
+Got 0 key-value pairs from storage
 ```
-Note: the `false` at the second line is returned from [here](https://github.com/subsquid/squid-sdk/blob/ece6df2a889151d5d20b1569acc236bb9ee6f9af/substrate/substrate-runtime/src/runtime/runtime.ts#L435).
