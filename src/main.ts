@@ -10,7 +10,7 @@ processor.run(new MockDatabase(), async (ctx) => {
       `header.specVersion is ${block.header.specVersion} ` +
       `and storage.lbp.poolData.v176.is() is ${storage.lbp.poolData.v176.is(block.header)}`
     )
-    if (storage.lbp.poolData.v176.is(block.header) || block.header.specVersion >= 176) {
+    if (storage.lbp.poolData.v176.is(block.header)) {
       let pairs: any[] = []
       for await (const page of storage.lbp.poolData.v176.getPairsPaged(500, block.header)) {
         page.forEach(p => pairs.push(p))
